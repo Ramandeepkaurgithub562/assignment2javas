@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Set font family for body text */
+    background-color: #d4e7f3; /* Light blue background color */
+    color: #003366; /* Dark blue text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center-align text */
+}
+
+h1 {
+    margin: 20px 0; /* Top and bottom margin of 20px, no left/right margin */
+    font-size: 3em; /* Large font size */
+    color: #003366; /* Dark blue text color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1.5px; /* Letter spacing for emphasis */
+    font-family: 'Tahoma', sans-serif; /* Alternative font family */
+}
+
+/* Gallery Styles */
+#gallery {
+    width: 90%; /* 90% width of its container */
+    margin: 20px auto; /* 20px top and bottom margin, auto left and right margin for centering */
+    background: #eaeaea; /* Light grey background */
+    padding: 20px; /* Padding inside the gallery */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow content */
+}
+
+figure {
+    margin: 0; /* Remove default margin */
+    position: relative; /* Relative positioning for containing image and caption */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+figure img {
+    max-width: 100%; /* Maximum width of image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for image */
+    border: 3px solid #003366; /* Dark blue border */
+    transition: transform 0.3s ease; /* Smooth transformation effect */
+}
+
+figcaption {
+    position: absolute; /* Absolute positioning for caption */
+    bottom: 10px; /* Distance from bottom */
+    left: 10px; /* Distance from left */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #ffffff; /* White text color */
+    padding: 10px 15px; /* Padding inside caption */
+    border-radius: 3px; /* Rounded corners for caption */
+    font-size: 1em; /* Font size */
+    transition: background 0.3s ease; /* Smooth background transition */
+    font-family: 'Times New Roman', Times, serif; /* Font family */
+}
+
+figcaption:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center-align list items */
+    flex-wrap: wrap; /* Wrap items if they exceed width */
+    margin-top: 20px; /* Top margin */
+}
+
+ul li {
+    margin: 10px; /* Margin around list items */
+    transition: transform 0.3s ease; /* Smooth transformation effect */
+}
+
+ul li:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+ul li img {
+    cursor: pointer; /* Pointer cursor for images */
+    border-radius: 5px; /* Rounded corners for images */
+    border: 3px solid #003366; /* Dark blue border */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transformation and filter effect */
+}
+
+/* CSS filter for grayscale thumbnails */
+ul li img.inactive {
+    filter: grayscale(100%); /* Convert to grayscale for inactive images */
+    transition: filter 0.3s ease; /* Smooth grayscale effect */
+}
+
+ul li img.active {
+    filter: none; /* Remove grayscale filter for active image */
+    border: 3px solid #003366; /* Dark blue border */
+}
+
+ul li img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    filter: none; /* Remove any filters on hover */
+}
+
+/* Subtle animation for the featured image */
+figure img {
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with 0 opacity */
+    }
+    to {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
